@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        
+        <!-- tell mobile phones that they should not zoom out the page,
+             they should always start with the scale of one         -->
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        
         <!-- like a CSS reset that makes the CSS looks the same in all browsers -->
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         
         <!-- import the custom stylesheet created by us -->
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        
+        <!-- import the queries stylesheet -->
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
         
         <!-- import custom fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet" type="text/css">
@@ -459,5 +467,50 @@
                     </form>
                 </div>
             </section>
+            
+            <footer>
+                <div class="row">
+                    <div class="col span-1-of-2">
+                        <ul class="footer-nav">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">iOS App</a></li>
+                            <li><a href="#">Android App</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col span-1-of-2">
+                        <ul class="social-links">
+                            <li><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+                            
+                            <li><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+                            
+                            <li><a href="#"><i class="icon ion-logo-google"></i></a></li>
+                            
+                            <li><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+                            
+                            <li><a href="#"><i class="icon ion-logo-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <p>
+                        Copyright &copy; 2018 by Catalin Pit. All rights reserved.    
+                    </p>
+                </div>
+            </footer>
         </body>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    
+    <!-- it enables us to use and style HTML5 in
+         order browsers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    
+    <!-- allows the use of CSS3 pseudoclasses
+         such as last child and first child on
+         older browsers -->
+    <script src="http://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
 </html>

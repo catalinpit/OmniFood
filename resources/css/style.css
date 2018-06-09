@@ -6,16 +6,19 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-html {
+html, 
+body {
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     /* make the fonts render in a perfect way */
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 /* clear the float after an element */
@@ -149,6 +152,7 @@ a:visited {
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: 1px solid #e67e22;
+    -webkit-transition: border-bottom 0.5s, color 0.5s;
     transition: border-bottom 0.5s, color 0.5s;
 }
 
@@ -174,6 +178,7 @@ input[type=submit] {
     /* the button takes 0.5 seconds to get orange
        when we hover the mouse on it
     */
+    -webkit-transition: background-color 0.5s, border 0.5s, color 0.5s;
     transition: background-color 0.5s, border 0.5s, color 0.5s;
 }
 
@@ -220,6 +225,7 @@ header {
     /* linear-gradient used to make the background image darker
        so the text is visible 
     */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
     /* make the header as high as the view port */
     height: 100vh;
@@ -239,6 +245,7 @@ header {
     /* translate the element half of its width and of its heigh,
        up and to the left 
     */
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -269,6 +276,7 @@ header {
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.5s;
     transition: border-bottom 0.5s;
 }
 
@@ -320,12 +328,17 @@ header {
     */
     width: 100%;
     height: auto;
+    -webkit-transform: scale(1.15);
     transform: scale(1.15);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 .meal-photo img:hover {
     opacity: 1;
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
 }
 
@@ -410,6 +423,7 @@ header {
 /* --------------------- */
 
 .testimonials {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/back-customers.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/back-customers.jpg);
     background-size: cover;
     color: #fff;
@@ -466,6 +480,7 @@ cite img {
     border-radius: 5px;
     width: 90%;
     margin-left: 5%;
+    -webkit-box-shadow: 0 2px 2px #efefef;
     box-shadow: 0 2px 2px #efefef;
 }
 
@@ -539,3 +554,89 @@ input[type=checkbox] {
 
 /* remove the blue borders from the form */
 *:focus {outline: none;}
+
+/* --------------------- */
+/* FOOTER SETTINGS */
+/* --------------------- */
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link, 
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ion-logo-facebook,
+.ion-logo-twitter,
+.ion-logo-google,
+.ion-logo-instagram {
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.ion-logo-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-logo-twitter:hover {
+    color: #00aced;
+}
+
+.ion-logo-google:hover {
+    color: #dd4b39;
+}
+
+.ion-logo-instagram:hover {
+    color: #517fa4;
+}
+
+.ion-logo-linkedin:hover {
+    color: #007bb6;
+}
