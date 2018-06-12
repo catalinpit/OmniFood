@@ -75,4 +75,21 @@ $(document).ready(function() {
             icon.removeClass('ion-md-close');
         }
     });
+    
+    /* Maps */
+    var map = new GMaps({
+        div: '.map',
+        lat: 51.50,
+        lng: -0.005,
+        zoom: 12
+    });
+    
+    map.addMarker({
+        lat: 51.503324,
+        lng: -0.1217317,
+        title: 'London Eye',
+        infoWindow: {
+            content: '<p>London Eye</p>'
+        }
+    });
 });
